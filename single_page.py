@@ -35,9 +35,20 @@ def get_tags():
     results = soup.find(class_="tags")
     print(results.text.strip())
 
+def get_thumbnail():
+    images = []
+    for img in soup.findAll('img'):
+        images.append(img.get('src'))
+    print(images)
+
+
+
+
+
 get_date()
 get_title()
 get_category()
 get_description()
 get_body()
 get_tags()
+get_thumbnail()
